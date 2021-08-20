@@ -129,7 +129,6 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #635854;
 }
 .home-image path {
   opacity: 0;
@@ -165,4 +164,5 @@ path.current-floor {
 .politic a {
   margin-right: 10px;
   text-decoration-line: underline;
+  color: #635854;
 }
