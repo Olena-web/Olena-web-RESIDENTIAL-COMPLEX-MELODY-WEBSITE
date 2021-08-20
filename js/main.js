@@ -5,7 +5,8 @@ $(document).ready(function () {
   const floorPath = $(".home-image path"); //floor in the svg
   const modal = $(".modal");
   const modalCloseButton = $(".modal-close-button");
-
+  const viewFlatsButton = $(".view-flats");
+  const flatsPath = $(".flats path");
   //mouseover on the floor
   floorPath.on("mouseover", function () {
     $(floorPath).removeClass("current-floor"); //remove active class from floor
@@ -16,6 +17,8 @@ $(document).ready(function () {
   floorPath.on("click", toggleModal);
 
   modalCloseButton.on("click", toggleModal);
+
+  viewFlatsButton.on("click", toggleModal);
 
   // click on the button up
   counterUp.on("click", function () {

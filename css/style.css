@@ -81,7 +81,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.see-flats {
+.view-flats {
   width: 297px;
   height: 51px;
 
@@ -191,6 +191,14 @@ path.current-floor {
   background-color: #fff;
   flex-grow: 1;
   display: flex;
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: transform 0.2s opasity 0.2s;
+  transition-delay: 0.2s;
+}
+.is-open > .modal-dialog {
+  opacity: 1;
+  transform: translateY(0);
 }
 .modal-image {
   background-color: #ebebeb;
@@ -198,7 +206,15 @@ path.current-floor {
   text-align: center;
   padding: 50px;
 }
-.modal-title {
+.flats path {
+  opacity: 0;
+  cursor: pointer;
+}
+.flats path:hover {
+  opacity: 1;
+}
+.modal-title,
+.modal-counter {
   font-family: "Bebas Neue", sans-serif;
   font-size: 24px;
   line-height: 29px;
