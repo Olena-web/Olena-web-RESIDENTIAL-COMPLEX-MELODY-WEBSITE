@@ -118,18 +118,28 @@ h2 {
   padding-top: 48px;
 }
 .footer-contacts {
-  margin-right: 64px;
-  margin-left: 39px;
+  display: flex;
+  flex-direction: column;
+}
+.footer-contacts a {
+  color: #635854;
+  text-decoration: none;
 }
 #footer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  color: #635854;
 }
 .home-image path {
   opacity: 0;
   cursor: pointer;
 }
 .home-image path:hover {
+  opacity: 1;
+}
+
+path.current-floor {
   opacity: 1;
 }
 .counter-group {
@@ -144,4 +154,15 @@ h2 {
 
 .counter-arrow-down {
   transform: rotateX(180deg);
+}
+.politic {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  /* justify-content: space-between; */
+}
+.politic a {
+  margin-right: 10px;
+  text-decoration-line: underline;
 }
