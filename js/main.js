@@ -1,5 +1,7 @@
 $(document).ready(function () {
   let currentFloor = 2;
+  let currentFlat = 40;
+  let currentInfo = 40;
   const counterUp = $(".counter-up");
   const counterDown = $(".counter-down");
   const floorPath = $(".home-image path"); //floor in the svg
@@ -7,6 +9,8 @@ $(document).ready(function () {
   const modalCloseButton = $(".modal-close-button");
   const viewFlatsButton = $(".view-flats");
   const flatsPath = $(".flats path");
+  const flatsLink = $(".flat-link");
+
   //mouseover on the floor
   floorPath.on("mouseover", function () {
     $(floorPath).removeClass("current-floor"); //remove active class from floor
@@ -46,7 +50,23 @@ $(document).ready(function () {
       $(`[data-floor = ${usCurrentFloor}]`).toggleClass("current-floor");
     }
   });
+
+  flatsPath.on("mouseover", function () {
+    deleteClass();
+    currentFlat = $(this).attr("data-flat");
+    $(`[data-item=${currentFlat}]`).toggleClass("current-flat"); // добавляем класс квартиры
+  });
+
+  flatsLink.on("mouseover", function () {
+    deleteClass();
+    currentLink = $(this).attr("data-item");
+    $(`[data-flat="${currentLink}"]`).toggleClass("current-flat");
+  });
   function toggleModal() {
     modal.toggleClass("is-open");
+  }
+  function deleteClass() {
+    flatsPath.removeClass("current-flat");
+    flatsLink.removeClass("current-flat");
   }
 });

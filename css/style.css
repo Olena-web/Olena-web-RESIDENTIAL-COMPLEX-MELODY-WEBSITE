@@ -264,3 +264,12 @@ path.current-floor {
   border: none;
   background-color: #fff;
 }
+.current-flat {
+  color: #3596f5; /* меняем цвет */
+  text-decoration: underline; /* добавляем подчёркивание */
+  cursor: pointer; /* сделали, чтобы при наведении на path была рука :D */
+}
+
+path.current-flat {
+  opacity: 1; /* убираем прозрачность */
+}
